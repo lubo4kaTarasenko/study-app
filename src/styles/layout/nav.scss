@@ -1,0 +1,19 @@
+.nav {
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: $dark;
+  color: $light;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: flex-end;
+  .flex-item {
+    flex: 1;
+    
+  }
+  .nav-links {
+    .nav-link {
+      color: $light;
+    }
+  }
+}
