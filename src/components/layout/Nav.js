@@ -1,4 +1,5 @@
 import React from 'react'
+import BaseBtn from '../buttons/BaseBtn'
 
 const Nav = () => {
   return (
@@ -11,7 +12,7 @@ const Nav = () => {
           <ul>
             <li><a href='#' className='nav-link'>Posts</a></li>
             <li><a href='#' className='nav-link'>About</a></li>
-            <li><a href='#' className='nav-link'>Login</a></li>   
+            <li ><BaseBtn type='outlined' text='Login'/></li>   
           </ul>
         </nav>
       </div>

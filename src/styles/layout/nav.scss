@@ -12,12 +12,12 @@
   }
 
   a {
-    color: $light;
-    padding: 10px;
+    color: white;
+    padding: 5px 10px;;
     margin: 0 5px;
     font-size: 20px;
     &:hover {
-      border-bottom: 2px solid $light;
+      border-bottom: 2px solid $blueLight;
     }
   }
 
