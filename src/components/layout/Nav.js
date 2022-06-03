@@ -2,14 +2,20 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <nav className='nav flex'>
-      <div className='logo flex-item'>LOGO</div>
-      <div className='flex-item nav-links'>
-        <a href='#' className='nav-link'>Posts</a>
-        <a href='#' className='nav-link'>About</a>
-        <a href='#' className='nav-link'>Login</a>      
+    <div className='navbar '>
+      <div className='container flex'>
+        <div className='logo flex-item'>
+          <img src="/download.png"/>
+        </div>
+        <nav >
+          <ul>
+            <li><a href='#' className='nav-link'>Posts</a></li>
+            <li><a href='#' className='nav-link'>About</a></li>
+            <li><a href='#' className='nav-link'>Login</a></li>   
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </div>
   )
 }
 

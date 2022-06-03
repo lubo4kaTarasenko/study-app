@@ -1,19 +1,36 @@
-.nav {
-  padding-left: 10%;
-  padding-right: 10%;
+.navbar {
   background-color: $dark;
   color: $light;
-  width: 100%;
-  height: 80px;
-  align-items: center;
-  justify-content: flex-end;
-  .flex-item {
-    flex: 1;
-    
+  height: 110px;
+
+  .flex {
+    justify-content: space-between;
   }
-  .nav-links {
-    .nav-link {
-      color: $light;
+
+  ul {
+    display: flex;
+  }
+
+  a {
+    color: $light;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 20px;
+    &:hover {
+      border-bottom: 2px solid $light;
     }
   }
+
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.logo{
+  width: 70px;
+  background-color: $dark;
 }
