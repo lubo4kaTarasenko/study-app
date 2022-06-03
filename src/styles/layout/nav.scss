@@ -7,13 +7,9 @@
     justify-content: space-between;
   }
 
-  ul {
-    display: flex;
-  }
-
   a {
     color: white;
-    padding: 5px 10px;;
+    padding: 5px 10px;
     margin: 0 5px;
     font-size: 20px;
     &:hover {
@@ -33,4 +29,39 @@
 .logo{
   width: 70px;
   background-color: $dark;
+}
+
+.nav-toggle {
+  font-size: 45px;
+}
+
+@media only screen and (min-width: 750px){
+  .nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+  }
+
+  .login-btn-cont {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 750px){
+  .nav-links {
+    position: absolute;
+    left: 0px;
+    padding-left: 42%;
+    top: 100px;
+    height: 300px;
+    width: 100%;
+    background-color: $dark;
+    li {
+      margin-top: 30px;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
 }
