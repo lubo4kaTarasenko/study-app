@@ -26,7 +26,7 @@ const Nav = () => {
               </NavLink>
             </li>
             <li className='login-btn-cont'>
-              <NavLink  to="/about" >
+              <NavLink  to="/login" >
                 <BaseBtn type='outlined' text='Login'/>
               </NavLink>            
             </li>   

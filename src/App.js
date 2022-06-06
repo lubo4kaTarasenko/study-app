@@ -5,6 +5,7 @@ import Index from './components/pages/posts/Index';
 import NewPost from './components/pages/posts/NewPost';
 import About from './components/pages/About';
 import ErrorPage from './components/pages/ErrorPage';
+import Login from './components/auth/Login';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path='/post/:id'/>
           </Route>
           <Route path='about' element={<About/>}/>
+          <Route path='login' element={<Login/>}/>
 
           <Route path='*' element={<ErrorPage/>}/>
         </Route>

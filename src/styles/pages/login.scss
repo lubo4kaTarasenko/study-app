@@ -1,0 +1,26 @@
+.login-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 110px);
+  background: url("https://media.istockphoto.com/photos/navy-blue-black-abstract-background-stripe-technology-futuristic-led-picture-id1316458620?b=1&k=20&m=1316458620&s=170667a&w=0&h=m1oHrCdR-W-RV-5QABEcrunGf6jXqOMKCNxMfR5EGRs=");
+  background-size: cover;
+  background-position: center;
+
+  form {
+    background-color: $dark;
+    color: white;
+    padding: 0px 60px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 17px 2px $blueMedium;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .btn-cont {
+    text-align: center;
+    margin: 30px;
+  }
+}
