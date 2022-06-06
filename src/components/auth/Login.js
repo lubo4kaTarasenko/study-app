@@ -16,14 +16,19 @@ const Login = () => {
       name: 'username',
       type: 'text',
       placeholder: 'username',
-      label: 'Username'
+      errorMessage: 'name shoud be 3-10 characters',
+      label: 'Username', 
+      pattern: "^[A-Za-z0-9]{3, 10}$",
+      required: true
     },
     {
       id: 2,
       name: 'email',
       type: 'email',
       placeholder: 'email',
-      label: 'Email'
+      errorMessage: 'it should be valid email',
+      label: 'Email',
+      required: true
     },
     {
       id: 3,
@@ -37,14 +42,18 @@ const Login = () => {
       name: 'password',
       type: 'password',
       placeholder: 'password',
-      label: 'Password'
+      errorMessage: 'It should be valid password',
+      label: 'Password',
+      required: true
     },
     {
       id: 5,
       name: 'confirmPassword',
       type: 'password',
       placeholder: 'confirm password',
-      label: 'Confirm password'
+      errorMessage: 'It should be equal password',
+      label: 'Confirm password',
+      required: true
     }
 
   ]
@@ -55,7 +64,7 @@ const Login = () => {
   }
 
   const onChange = (e) => {
-    setValues({...values, [e.taget.name]: e.target.value })
+    setValues({...values, [e.target.name]: e.target.value })
   } 
 
   return (
