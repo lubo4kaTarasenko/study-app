@@ -26,7 +26,7 @@ const Login = () => {
       name: 'email',
       type: 'email',
       placeholder: 'email',
-      errorMessage: 'it should be valid email',
+      errorMessage: 'it should be a valid email',
       label: 'Email',
       required: true
     },
@@ -42,7 +42,7 @@ const Login = () => {
       name: 'password',
       type: 'password',
       placeholder: 'password',
-      errorMessage: 'It should be valid password',
+      errorMessage: 'at least 8 chars, 1 lowercase letter, 1 uppercase letter, 1 special char and 1 number.',
       label: 'Password',
       pattern: "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$",
       required: true
@@ -52,7 +52,7 @@ const Login = () => {
       name: 'confirmPassword',
       type: 'password',
       placeholder: 'confirm password',
-      errorMessage: 'It should be equal password',
+      errorMessage: 'The password confirmation does not match',
       label: 'Confirm password',
       pattern: values.password,
       required: true

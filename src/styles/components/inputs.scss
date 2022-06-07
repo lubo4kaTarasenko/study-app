@@ -15,13 +15,13 @@ input {
     box-shadow: 0px 0px 17px 2px lime;
   }
   &:invalid[focused="true"] ~.error {
-    display: block;
+    color: $errorRed;
   }
 }
 
 .form-input {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   font-size: 18px;
   margin: 40px 0;
@@ -35,11 +35,13 @@ input {
   }
 
   .error {
-    color: $errorRed;
-    font-size: 15px;
-    font-weight: 600;
-    display: none;
+    color: $dark;
+    font-size: 14px;
+    font-weight: 300;
     margin-top: 10px;
+    margin-top: 16px;
+    display: block;
+    line-height: 1;
   }
 }
 
