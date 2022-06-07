@@ -7,14 +7,14 @@ input {
     outline: none;
     box-shadow: 0px 0px 17px 2px $blueMedium;
   }
-  &:invalid {
+  &:invalid[focused="true"] {
     box-shadow: 0px 0px 17px 2px $errorRed;
   }
 
   &:valid {
     box-shadow: 0px 0px 17px 2px lime;
   }
-  &:invalid ~.error {
+  &:invalid[focused="true"] ~.error {
     display: block;
   }
 }
@@ -43,20 +43,6 @@ input {
   }
 }
 
-// @media only screen and (min-width: 750px){
-//   .form-input {
-//     display: flex;
-//     flex-direction: row;
-  
-//     // .error {
-//     //   color: $errorRed;
-//     //   font-size: 15px;
-//     //   font-weight: 600;
-//     //   display: none;
-//     //   margin-top: 10px;
-//     // }
-//   }
-// }
 
 @media only screen and (max-width: 750px){
   .form-input {
@@ -77,13 +63,5 @@ input {
       flex: 1;
       width: 100%;
     }
-  
-    // .error {
-    //   color: $errorRed;
-    //   font-size: 15px;
-    //   font-weight: 600;
-    //   display: none;
-    //   margin-top: 10px;
-    // }
   }
 }
