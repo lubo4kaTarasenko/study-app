@@ -18,7 +18,7 @@ const Login = () => {
       placeholder: 'username',
       errorMessage: 'name shoud be 3-10 characters',
       label: 'Username', 
-      pattern: "^[A-Za-z0-9]{3, 10}$",
+      pattern: "^[A-Za-z0-9]{3,10}$",
       required: true
     },
     {
@@ -44,6 +44,7 @@ const Login = () => {
       placeholder: 'password',
       errorMessage: 'It should be valid password',
       label: 'Password',
+      pattern: "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$",
       required: true
     },
     {
@@ -53,6 +54,7 @@ const Login = () => {
       placeholder: 'confirm password',
       errorMessage: 'It should be equal password',
       label: 'Confirm password',
+      pattern: values.password,
       required: true
     }
 
