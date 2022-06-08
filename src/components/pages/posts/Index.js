@@ -1,27 +1,30 @@
-import React from 'react'
+import React, {useState, useLayoutEffect } from 'react'
 import axios from 'axios'
 
 
 const Index = () => {
+  const[posts, setPosts] = useState([])
+  useLayoutEffect(() => { getPosts() }, [])
 
-  console.log(process.env.FAKE_JSON_TOKEN)
-  let payload = {
-    token: process.env.FAKE_JSON_TOKEN,
+  const payload = {
+    token: process.env.REACT_APP_FAKE_JSON_TOKEN,
     data: {
-      name: "nameFirst",
-      email: "internetEmail",
-      phone: "phoneHome",
+      name: "stringWords",
+      description: "stringLong",
+      body: "stringWords|50,200",
       _repeat: 20
     }
-};
+  };
 
-axios({
-  method: "post",
-  url: "https://app.fakejson.com/q",
-  data: payload
-}).then(function(resp) {
-    
-  });
+  const getPosts = () => {
+    axios({
+      method: "post",
+      url: "https://app.fakejson.com/q",
+      data: payload
+    }).then(function(resp) {
+      setPosts(resp)        
+    });
+  }
 
   return (
     <div>
