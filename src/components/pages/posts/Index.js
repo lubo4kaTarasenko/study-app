@@ -6,28 +6,27 @@ const Index = () => {
   const[posts, setPosts] = useState([])
   useLayoutEffect(() => { getPosts() }, [])
 
-  const payload = {
-    token: process.env.REACT_APP_FAKE_JSON_TOKEN,
-    data: {
-      name: "stringWords",
-      description: "stringLong",
-      body: "stringWords|50,200",
-      _repeat: 20
-    }
-  };
 
   const getPosts = () => {
-    axios({
-      method: "post",
-      url: "https://app.fakejson.com/q",
-      data: payload
-    }).then(function(resp) {
-      setPosts(resp)        
-    });
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then(function(resp) {
+        setPosts(resp.data)        
+      });
   }
 
   return (
-    <div>
+    <div className='container blog-cont'>
+      {posts?.length > 0 && posts.map((post) => 
+        <div className='post-cont flex' key={post.id }>
+          <div className='post-title'>
+            {post.title}
+          </div>
+          <div className='post-body'>
+            {post.body}
+          </div>
+        </div>
+      )}
       
     </div>
   )

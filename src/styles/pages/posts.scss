@@ -1,0 +1,21 @@
+.blog-cont {
+  padding: 50px 0;
+
+
+  .post-cont{
+    align-items: baseline;
+    border-bottom: 1px solid $dark;
+    padding: 20px 0px;
+
+    .post-title {
+      flex: 1;
+      font-weight: 600;
+      color: $blueMedium;
+    }
+    .post-body {
+      flex: 4;
+      padding-left: 40px;
+      color: $dark;
+    }
+  }
+}
